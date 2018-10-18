@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     binding.pry
     if params[:user] && params[:user].authenticate
-
+    end
   end
 
 end
