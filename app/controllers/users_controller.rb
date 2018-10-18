@@ -8,9 +8,9 @@ class UsersController < ApplicationController
     if params[:user][:password] == params[:user][:password_confirmation]
       user = User.create(name: params[:user][:name], password: params[:user][:password])
       session[:user_id] = user.id
-      redirect_to "/users/home"
+      redirect_to :home
     else
-      redirect_to root_path
+      render :new
     end
   end
 end
